@@ -84,6 +84,7 @@ function JSClock() {
 console.log(`The time is exactly ${JSClock()} at the moment.`);
 
 console.log("New line added.");
+console.log("Second line added.");
 // Changing time:
 // const clock = () => {
 //   let time = new Date();
