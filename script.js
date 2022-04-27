@@ -71,17 +71,18 @@
 // console.log(restParams(2, 1, 2, 3)); //Output: [2*1, 2*2, 2*3]=[2,4,6]
 // console.log(restParams(3, 6, 7, 8, 9));
 
-function JSClock() {
-  let time = new Date();
-  let hour = time.getHours();
-  let minute = time.getMinutes();
-  let second = time.getSeconds();
-  let tempTime = "" + (hour > 24 ? hour - 24 : hour);
-  tempTime += (minute < 10 ? ":0" : ":") + minute;
-  tempTime += (second < 10 ? ":0" : ":") + second;
-  return tempTime;
-}
-console.log(`The time is exactly ${JSClock()} at the moment.`);
+///////////////////////////////////////////////////////////////////////////// Numbers and dates /Digital Clock:
+// function JSClock() {
+//   let time = new Date();
+//   let hour = time.getHours();
+//   let minute = time.getMinutes();
+//   let second = time.getSeconds();
+//   let tempTime = "" + (hour > 24 ? hour - 24 : hour);
+//   tempTime += (minute < 10 ? ":0" : ":") + minute;
+//   tempTime += (second < 10 ? ":0" : ":") + second;
+//   return tempTime;
+// }
+// console.log(`The time is exactly ${JSClock()} at the moment.`);
 
 // Changing time:
 // const clock = () => {
@@ -98,3 +99,7 @@ console.log(`The time is exactly ${JSClock()} at the moment.`);
 //   setTimeout(clock, 1000);
 // };
 // clock();
+/////////////////////////////////////////
+// Regular expression:
+// const re = /ab + c/; // or using RegEx object:
+// const reObj = new RegExp("ab + c");
