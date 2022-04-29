@@ -104,30 +104,59 @@
 // const re = /ab + c/; // or using RegEx object:
 // const reObj = new RegExp("ab + c");
 
-// Arrays: Filling array:
-const arr1 = [];
-arr1.length = 8;
-for (let i = 0; i < arr1.length; i++) {
-  arr1[i] = i + 1;
-}
-console.log(arr1);
+// // Arrays: Filling array:
+// const arr1 = [];
+// arr1.length = 8;
+// for (let i = 0; i < arr1.length; i++) {
+//   arr1[i] = i + 1;
+// }
+// console.log(arr1);
 
-const arr2 = [];
-arr2.length = 5;
-arr2.fill(3); // fill the array only with 3
-console.log(arr2);
+// const arr2 = [];
+// arr2.length = 5;
+// arr2.fill(3); // fill the array only with 3
+// console.log(arr2);
 
-let arr2D = [];
-arr2D.length = 4;
-let arr2D2 = [];
-arr2D2.length = 4;
+// // 2D array:
+// let arr2D = [];
+// arr2D.length = 4;
 
-let a = new Array(4);
-for (let i = 0; i < 4; i++) {
-  arr2D[i] = new Array(4);
-  for (let j = 0; j < 4; j++) {
-    arr2D[i][j] = "[" + i + ", " + j + "]";
-  }
-}
+// for (let i = 0; i < arr2D.length; i++) {
+//   let arr2D2 = [4];
+//   //arr2D2.length = 4;
+//   arr2D[i] = arr2D2;
 
-console.log(arr2D);
+//   for (let j = 0; j < arr2D.length; j++) {
+//     arr2D[i][j] = "[" + i + ", " + j + "]";
+//   }
+// }
+// console.log(arr2D);
+
+///////////////////////////////
+// // Map = key value pair:
+// const mapJS = new Map();
+// mapJS.set("dog", "woof");
+// mapJS.set("cat", "Meow");
+// mapJS.set("elephant", "toot");
+// // map operations:
+// console.log(mapJS.get("dog"));
+// mapJS.delete("elephant");
+// console.log(mapJS.has("elephant"));
+// console.log(mapJS.size);
+// console.log(mapJS);
+
+// for (let [key, value] of mapJS) console.log(`${key} goes ${value}`);
+
+//////////////////////////////////////////////
+// Set:
+const setJS = new Set();
+setJS.add(1);
+setJS.add(2022);
+setJS.add("new add");
+setJS.add("foo");
+
+console.log(setJS.has("foo"));
+setJS.delete("foo");
+console.log(setJS);
+
+for (let item of setJS) console.log(item);
