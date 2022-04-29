@@ -148,15 +148,25 @@
 // for (let [key, value] of mapJS) console.log(`${key} goes ${value}`);
 
 //////////////////////////////////////////////
-// Set:
-const setJS = new Set();
-setJS.add(1);
-setJS.add(2022);
-setJS.add("new add");
-setJS.add("foo");
+// // Set:
+// const setJS = new Set();
+// setJS.add(1);
+// setJS.add(2022);
+// setJS.add("new add");
+// setJS.add("foo");
 
-console.log(setJS.has("foo"));
-setJS.delete("foo");
-console.log(setJS);
+// console.log(setJS.has("foo"));
+// setJS.delete("foo");
+// console.log(setJS);
 
-for (let item of setJS) console.log(item);
+// for (let item of setJS) console.log(item);
+
+////////////////////////////////
+// Objects:
+
+const car = {
+  make: "Opel",
+  model: "Kadet",
+  year: 1989,
+};
+console.log(car);
