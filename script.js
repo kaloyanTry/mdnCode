@@ -1,4 +1,4 @@
-"strict mode";
+'strict mode';
 
 // 1. Object literals:
 // // Object literals in JS: Literals represet values in JS
@@ -162,11 +162,72 @@
 // for (let item of setJS) console.log(item);
 
 ////////////////////////////////
-// Objects:
+// OOP: JS = Prototype-base language
+// Objects, creating an object:
+// const car = {
+//   make: "Opel",
+//   model: "Kadet",
+//   year: 1989,
+// };
+// console.log(car);
 
-const car = {
-  make: "Opel",
-  model: "Kadet",
-  year: 1989,
-};
-console.log(car);
+// new way = syntactical sugar class
+// class Employee {
+//   constructor() {
+//     this.name = '';
+//     this.dept = 'general';
+//   }
+// }
+
+function Employee(name, dept) {
+  this.name = name || '';
+  this.dept = dept || 'general';
+}
+
+function Manager() {
+  Employee.call(this);
+  this.reports = [];
+}
+
+Manager.prototype = Object.create(Employee.prototype);
+Manager.prototype.constructor = Manager;
+
+function WorkerBee(projects) {
+  Employee.call(this);
+  this.projects = projects || [];
+}
+
+WorkerBee.prototype = Object.create(Employee.prototype);
+WorkerBee.prototype.constructor = WorkerBee;
+
+function SalesPerson() {
+  WorkerBee.call(this);
+  this.dept = 'sales';
+  this.quota = 100;
+}
+
+SalesPerson.prototype = Object.create(WorkerBee.prototype);
+SalesPerson.prototype.constructor = SalesPerson;
+
+function Engineer(name, projects, machine) {
+  WorkerBee.call(this, name, 'engineering', projects);
+  this.machine = machine || '';
+}
+
+Engineer.prototype = Object.create(WorkerBee.prototype);
+Engineer.prototype.constructor = Engineer;
+
+// creating individual objects /'instances'
+const jim = new Employee();
+const sally = new Manager();
+const mark = new WorkerBee();
+const fred = new SalesPerson();
+const jane = new Engineer();
+
+mark.name = 'Doe, Mark';
+mark.dept = 'admin';
+mark.projects = ['navigator'];
+
+// js adding a new property:
+mark.bonus = 3000; // individual
+Employee.prototype.speciality = 'none'; //prototype inherit property
