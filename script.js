@@ -231,3 +231,5 @@ mark.projects = ['navigator'];
 // js adding a new property:
 mark.bonus = 3000; // individual
 Employee.prototype.speciality = 'none'; //prototype inherit property
+console.log(mark);
+console.log(Employee);
